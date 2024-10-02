@@ -32,7 +32,6 @@ class Lottery {
         return `lottery_${year}${month}${day}_${hours}${minutes}${seconds}`;
     };
     sendMessage(message, keyOptions) {
-        console.log("-------->>>>>>>>>>>>>");
         let inline_keyboards = [];
     
         // Group buttons in pairs of two
