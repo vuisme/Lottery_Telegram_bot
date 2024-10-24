@@ -66,23 +66,23 @@ class Lottery {
                     this.descr[this.chatId] = text;
                 }
                 break;
-            case 'BUYLIMIT':
-                if (text && /^\d+$/.test(text)) {
-                    const numberValue = parseInt(text, 10);
-                    if (numberValue <= 1000000 && numberValue > 0) {
-                        this.buylimit[this.chatId] = numberValue;
-                    } else {
-                        bot.sendMessage(
-                            this.chatId,
-                            '⚠️ The number must be less than or equal to 1,000,000 and more than 0.'
-                        );
-                        return;
-                    }
-                } else {
-                    bot.sendMessage(this.chatId, '⚠️ Please send a valid number.');
-                    return;
-                }
-                break;
+            // case 'BUYLIMIT':
+            //     if (text && /^\d+$/.test(text)) {
+            //         const numberValue = parseInt(text, 10);
+            //         if (numberValue <= 1000000 && numberValue > 0) {
+            //             this.buylimit[this.chatId] = numberValue;
+            //         } else {
+            //             bot.sendMessage(
+            //                 this.chatId,
+            //                 '⚠️ The number must be less than or equal to 1,000,000 and more than 0.'
+            //             );
+            //             return;
+            //         }
+            //     } else {
+            //         bot.sendMessage(this.chatId, '⚠️ Please send a valid number.');
+            //         return;
+            //     }
+            //     break;
             case 'USDT':
                 if (text && /^\d+(\.\d{2})?$/.test(text)) {
                     const numberValue = parseFloat(text, 10);
